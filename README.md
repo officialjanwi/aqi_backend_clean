@@ -103,7 +103,7 @@ Pollution detection
 ### Requirements
 
 Install:
-pip install numpy pandas scikit-learn
+pip install numpy pandas scikit-learn and 
 pip install matplotlib
 ---
 
