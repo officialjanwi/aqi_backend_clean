@@ -1,0 +1,26 @@
+Delhi AQI Simulation Report  (SUMO)
+==================================================
+Area             : Major Dhyan Chand Nagar / India Gate
+Zone             : ITO
+External AQI     : 441.1  (Severe)
+
+Phase 1 AQI      : 416.7  (Severe)
+Phase 2 AQI      : 148.1  (Moderate)
+AQI Reduction    : 64.5%
+Emission Reduction: 13.0%
+
+Phase 2 Solutions:
+  • Speed Harmonization (max 35 km/h)
+  • Heavy Vehicle Ban (trucks + buses out)
+  • Rerouting (30% vehicles diverted)
+  • Idling Restriction (min 15 km/h)
+
+──────────────────────────────────────────────────
+Pollutant Results  (g/km fleet average):
+Pollutant    Phase 1    Phase 2  Reduction
+──────────────────────────────────────────
+CO2       38264.530  33419.867      12.7%
+CO         1687.370   1369.517      18.8%
+NO2         252.820    202.471      19.9%
+HC          252.482    207.381      17.9%
+PM25          8.419      6.779      19.5%

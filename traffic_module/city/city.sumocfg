@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<configuration>
+    <input>
+        <net-file value="city.net.xml" />
+        <route-files value="city.rou.xml" />
+        <additional-files value="city.add.xml,city.poly.xml" />
+    </input>
+    <gui_only>
+        <gui-settings-file value="city.view.xml" />
+        <start value="true" />
+        <quit-on-end value="true" />
+    </gui_only>
+    <time>
+        <begin value="0" />
+        <end value="-1" />
+        <step-length value="1" />
+    </time>
+    <processing>
+        <time-to-teleport value="300" />
+        <time-to-teleport.highways value="0" />
+        <collision.action value="warn" />
+        <ignore-route-errors value="true" />
+        <max-depart-delay value="90" />
+    </processing>
+    <report>
+        <no-step-log value="true" />
+        <no-warnings value="true" />
+    </report>
+</configuration>

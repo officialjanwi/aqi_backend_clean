@@ -1,0 +1,68 @@
+Warning: Discarding unknown compound 'usage.main' in type 'railway.rail|usage.main' (first occurrence for edge '77011091').
+Warning: Discarding unusable type 'waterway.drain' (first occurrence for edge '80499284').
+Warning: Discarding unusable type 'waterway.stream' (first occurrence for edge '973071356').
+Warning: Discarding unusable type 'aeroway.helipad' (first occurrence for edge '1248079201').
+Warning: Removing pt stop '1665772897' on non existing edge '188245893'.
+Warning: Removing pt stop '1988668271' on non existing edge '188245893'.
+Warning: Removing pt stop '1988668281' on non existing edge '188245893'.
+Warning: Removing pt stop '2622338438' on non existing edge '188245893'.
+Warning: Removing pt stop '2722924227' on non existing edge '188245893'.
+Warning: PT line in relation 2765996 with no stops ignored. Probably OSM file is incomplete.
+Warning: PT line in relation 6634354 with no stops ignored. Probably OSM file is incomplete.
+Warning: PT line in relation 7921454 with no stops ignored. Probably OSM file is incomplete.
+Warning: PT line in relation 7921477 with no stops ignored. Probably OSM file is incomplete.
+Warning: PT line in relation 7922642 with no stops ignored. Probably OSM file is incomplete.
+Warning: Removed invalid stop '5567166775' from line '10220586'.
+Warning: Removed invalid stop '4440796915' from line '10790072'.
+Warning: Removed invalid stop '5345534677' from line '10790072'.
+Warning: Removed invalid stop '4440796916' from line '10790072'.
+Warning: Cannot revise pt stop localization for pt line '13388413', which has no route edges. Ignoring!
+Warning: Could not assign stop '6547772100' to pt line '2535797' (closest edge 'NULL', distance 179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.00). Ignoring!
+Warning: Could not assign stop '2722924227' to pt line '2535797' (closest edge 'NULL', distance 179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.00). Ignoring!
+Warning: Could not assign stop '1988668281' to pt line '2535797' (closest edge 'NULL', distance 179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.00). Ignoring!
+Warning: Could not assign stop '2837165876' to pt line '2535797' (closest edge 'NULL', distance 179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.00). Ignoring!
+Warning: Could not assign stop '3580369626' to pt line '2535797' (closest edge 'NULL', distance 179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.00). Ignoring!
+Warning: Removed invalid stop '6547772100' from line '2535797'.
+Warning: Cannot revise pt stop localization for pt line '447209', which has no route edges. Ignoring!
+Warning: Cannot revise pt stop localization for pt line '7920424', which consist of one way only. Ignoring!
+Warning: Cannot revise pt stop localization for pt line '8035119', which has no route edges. Ignoring!
+Warning: Cannot revise pt stop localization for pt line '8037669', which has no route edges. Ignoring!
+Warning: Cannot revise pt stop localization for pt line '8050588', which consist of one way only. Ignoring!
+Warning: Cannot revise pt stop localization for pt line '8202259', which has no route edges. Ignoring!
+Warning: Not joining junctions 10255293266,10255293289 (parallel incoming -1121186659,1121186660#2).
+Warning: Not joining junctions 10603883041,10603883042 (parallel incoming 446922582#7,562205292#0).
+Warning: Not joining junctions 10991550170,4333487282 (only 1 exit node).
+Warning: Not joining junctions 11601587776,5420030388 (only 1 edge within and no cross-traffic).
+Warning: Not joining junctions 11601894177,7093683596 (parallel incoming 1075739137#3,28103660#8).
+Warning: Reducing junction cluster 308719791,939086478,939091050,939091191,9865442869 (parallel incoming 581546747,80499782).
+Warning: Reducing junction cluster 5567649510,6569267271,939086567 (not compact (maxEdge=293530132#0 length=9.37)).
+Warning: Found sharp turn with radius 3.60 at the start of edge '44831985#1'.
+Warning: Found sharp turn with radius 5.86 at the start of edge '686696028#2'.
+Warning: The traffic light '3746076255' does not control any links; it will not be build.
+Warning: Could not build program '0' for traffic light '3746076255'
+Warning: Minor green from edge '23134630#1' to edge '446922582#0' exceeds 19.44m/s. Maybe a left-turn lane is missing.
+Warning: Minor green from edge '446856065' to edge '446856066' exceeds 19.44m/s. Maybe a left-turn lane is missing.
+Warning: Speed of straight connection '1248027233#0_0->1248027233#1_0' reduced by 9.60 due to turning radius of 28.95 (length=16.67, angle=49.02).
+Warning: Speed of straight connection '1248027228_0->1248027233#0_0' reduced by 20.40 due to turning radius of 3.84 (length=1.15, angle=37.23).
+Warning: Speed of straight connection '1248031153_0->1248027223#1_0' reduced by 15.59 due to turning radius of 16.11 (length=8.19, angle=45.83).
+Warning: Speed of straight connection '582759331#1_0->582759331#2_0' reduced by 6.20 due to turning radius of 10.77 (length=3.00, angle=32.35).
+Warning: Speed of straight connection '1378612817_0->28103660#8_0' reduced by 9.98 due to turning radius of 41.04 (length=10.14, angle=29.46).
+Warning: Minor green from edge '23134630#1' to edge '446922582#0' exceeds 19.44m/s. Maybe a left-turn lane is missing.
+Warning: Minor green from edge '446856065' to edge '446856066' exceeds 19.44m/s. Maybe a left-turn lane is missing.
+Warning: Stop '5587022728' named 'Tilak Bridge' from line '13388413' on edge '446922581#2' is not part of the route.
+Warning: Stop '5418035756' named 'Mandi House' from line '13388413' on edge '446922581#2' is not part of the route.
+Warning: Stop '5273108940' named 'Tilak Bridge' from line '7611291' on edge '446922582#0' is not part of the route.
+Warning: Stop '-4440796915@6633896' named 'Kasturba Gandhi Marg Crossing' from line '7918165' on edge '-998790358#7' is not part of the route downstream of the previous stop.
+Warning: Stop '4440796915' named 'Kasturba Gandhi Marg Crossing' from line '7918167' on edge '998790352#2' is not part of the route downstream of the previous stop.
+Warning: Removed 32 pt stops because they could not be assigned to the network
+Warning: Writing incomplete roundabout. Edges: '24577121#0 24577121#2 24577121#5' no longer exist'
+Warning: Writing incomplete roundabout. Edges: '24583333#0 24583333#1 446922583#0 446922584#1 447141131#1 570859666#1 995113415' no longer exist'
+Warning: Writing incomplete roundabout. Edges: '582461171#1 582461171#2 582461171#3 656933872#1' no longer exist'
+Warning: 6 total messages of type: Cannot revise pt stop localization for pt line '%', which has no route edges. Ignoring!
+Warning: 22 total messages of type: Could not assign stop '%' to pt line '%' (closest edge '%', distance %). Ignoring!
+Warning: 14 total messages of type: Not joining junctions % (%).
+Warning: 46 total messages of type: PT line in relation % with no stops ignored. Probably OSM file is incomplete.
+Warning: 35 total messages of type: Removed invalid stop '%' from line '%'.
+Warning: 62 total messages of type: Removing pt stop '%' on non existing edge '%'.
+Warning: 32 total messages of type: Speed of % connection '%' reduced by % due to turning radius of % (length=%, angle=%).
+Warning: 37 total messages of type: Stop '%' named '%' from line '%' on edge '%' is %.

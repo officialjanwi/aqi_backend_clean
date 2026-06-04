@@ -1,0 +1,23 @@
+ROAD ACTION MODEL TRAINING REPORT
+================================
+
+Samples: 4309
+Accuracy: 0.908
+
+Class counts: {'no_action': 3533, 'speed_harmonization': 209, 'heavy_vehicle_ban': 294, 'rerouting': 147, 'idling_restriction': 126}
+
+Features: nveh, mean_speed, heavy_share, congestion_score, emission_score, aqi_proxy
+
+Classification report:
+                     precision    recall  f1-score   support
+
+  heavy_vehicle_ban      0.728     0.905     0.807        74
+ idling_restriction      0.386     0.548     0.453        31
+          no_action      1.000     0.962     0.980       884
+          rerouting      0.342     0.351     0.347        37
+speed_harmonization      0.593     0.615     0.604        52
+
+           accuracy                          0.908      1078
+          macro avg      0.610     0.676     0.638      1078
+       weighted avg      0.921     0.908     0.913      1078
+

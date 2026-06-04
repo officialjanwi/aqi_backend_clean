@@ -1,0 +1,23 @@
+<viewsettings>
+    <scheme name="real">
+        <background backgroundColor="80,85,80" showGrid="0"/>
+        <edges laneShowBorders="1" showLinkDecals="1" hideConnectors="0">
+            <colorScheme name="by selection">
+                <entry color="160,155,140" name="unselected"/>
+                <entry color="0,102,204"   name="selected"/>
+            </colorScheme>
+        </edges>
+        <vehicles vehicleQuality="3" showBlinker="1"
+                  vehicleSize.minSize="1" vehicleSize.exaggeration="4">
+            <colorScheme name="given/assigned vehicle color"/>
+        </vehicles>
+        <junctions drawShape="1">
+            <colorScheme name="uniform">
+                <entry color="60,60,60"/>
+            </colorScheme>
+        </junctions>
+        <polys polyType="1"/>
+    </scheme>
+    <delay value="50"/>
+    <viewport zoom="27.4" x="1481.31" y="1641.21"/>
+</viewsettings>

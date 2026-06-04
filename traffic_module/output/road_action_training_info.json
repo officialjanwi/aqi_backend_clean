@@ -1,0 +1,20 @@
+{
+  "n_samples": 4309,
+  "accuracy": 0.9081632653061225,
+  "class_counts": {
+    "no_action": 3533,
+    "speed_harmonization": 209,
+    "heavy_vehicle_ban": 294,
+    "rerouting": 147,
+    "idling_restriction": 126
+  },
+  "features": [
+    "nveh",
+    "mean_speed",
+    "heavy_share",
+    "congestion_score",
+    "emission_score",
+    "aqi_proxy"
+  ],
+  "model_type": "RandomForestClassifier"
+}

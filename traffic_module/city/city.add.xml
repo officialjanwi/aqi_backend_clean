@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
+<additional>
+    <edgeData id="edge_em" type="emissions" file="edge_emissions.xml" period="60" excludeEmpty="true" />
+</additional>

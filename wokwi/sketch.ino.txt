@@ -1,0 +1,92 @@
+#include <WiFi.h>
+#include <HTTPClient.h>
+#include <WiFiClientSecure.h>
+#include <DHT.h>
+
+const char* ssid = "Wokwi-GUEST";
+const char* password = "";
+
+// ngrok URL + backend endpoint
+const char* serverUrl = "https://your-ngrok-url.ngrok-free.app/iot/sensor";
+#define DHT_PIN 15
+#define DHTTYPE DHT22
+
+DHT dht(DHT_PIN, DHTTYPE);
+
+void setup() {
+  Serial.begin(115200);
+  delay(1000);
+
+  WiFi.begin(ssid, password);
+  Serial.print("Connecting to WiFi");
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(300);
+    Serial.print(".");
+  }
+  Serial.println();
+  Serial.println("WiFi Connected!");
+
+  dht.begin();
+}
+
+void loop() {
+  float humidity = dht.readHumidity();
+  float temperature = dht.readTemperature();
+  float traffic_density = 0.50;
+
+  if (isnan(humidity) || isnan(temperature)) {
+    Serial.println("Failed to read from DHT sensor!");
+    Serial.println("------------------------");
+    delay(3000);
+    return;
+  }
+
+  String json = "{";
+  json += "\"humidity\":" + String(humidity, 1) + ",";
+  json += "\"traffic_density\":" + String(traffic_density, 2);
+  json += "}";
+
+  Serial.println("Sending data to backend...");
+  Serial.println("POST JSON: " + json);
+
+  if (WiFi.status() == WL_CONNECTED) {
+    WiFiClientSecure client;
+    client.setInsecure();
+
+    HTTPClient http;
+    http.setTimeout(15000);
+
+    bool started = http.begin(client, serverUrl);
+    if (!started) {
+      Serial.println("http.begin() failed");
+      Serial.println("------------------------");
+      delay(5000);
+      return;
+    }
+
+    http.addHeader("Content-Type", "application/json");
+    http.addHeader("Accept", "application/json");
+    http.addHeader("ngrok-skip-browser-warning", "true");
+    http.addHeader("User-Agent", "ESP32");
+
+    int code = http.POST(json);
+
+    Serial.print("Response Code: ");
+    Serial.println(code);
+
+    if (code > 0) {
+      String resp = http.getString();
+      Serial.println("Response: " + resp);
+    } else {
+      Serial.print("HTTP error: ");
+      Serial.println(http.errorToString(code));
+    }
+
+    http.end();
+  } else {
+    Serial.println("WiFi not connected!");
+  }
+
+  Serial.println("------------------------");
+  delay(5000);
+}
