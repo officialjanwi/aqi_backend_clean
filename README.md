@@ -1,139 +1,175 @@
 # AQI Smart Project
 
-This project is a simple attempt to reduce air pollution (AQI) using a combination of traffic control and water-based intervention.
+This project is a smart system designed to reduce air pollution (AQI) using traffic control, IoT simulation, ML-based decision making, and Unity visualization.
 
-The idea is to detect situations where pollution increases and then take small but practical actions like adjusting traffic flow or activating water sprinklers to bring it down.
+The system detects pollution spikes and responds with actions such as traffic rerouting, speed control, and water sprinkler simulation.
 
 ---
 
-## What this project does
+## Live Backend
 
-* Monitors traffic conditions (vehicle count, speed)
-* Estimates emission levels based on traffic
-* Detects high pollution situations using a simple ML model
-* Suggests traffic actions like rerouting or speed control
-* Simulates water sprinklers (Unity) to reduce dust/pollution
-* Can connect with IoT (ESP32 via Wokwi) for sensor data
+[https://airsense-n6nq.onrender.com](https://airsense-n6nq.onrender.com)
+
+## API Documentation
+
+[https://airsense-n6nq.onrender.com/docs](https://airsense-n6nq.onrender.com/docs)
+
+---
+
+## System Overview
+
+This project integrates multiple components into a single pipeline:
+
+* Traffic monitoring system
+* Emission estimation based on vehicle flow
+* ML-based decision engine for AQI detection
+* Traffic control recommendations
+* Water sprinkler simulation using Unity
+* IoT sensor simulation using Wokwi / ESP32
+* FastAPI backend deployed on Render
+
+---
+
+## What the Project Does
+
+* Simulates environmental response using Unity (water sprinklers)
+* Accepts IoT sensor data through API endpoints
+* Connects all modules via a live backend system
+* Monitors traffic conditions such as vehicle count and speed
+* Estimates emission levels based on traffic data
+* Detects high pollution scenarios using a decision model
+
+---
+
+## Architecture Flow
+
+IoT Sensors (Wokwi / ESP32)
+→ FastAPI Backend (Render)
+→ ML Decision System
+→ Traffic Control Logic
+→ Unity Simulation (Environmental Response)
 
 ---
 
 ## Project Structure
 
-AQI-Smart-Project/
-│
+Aqi_backend_clean/
 ├── app/
+│   ├── core/
+│   ├── models/
+│   ├── routers/
+│   ├── services/
+│   └── main.py
 ├── traffic_module/
 ├── Unity/
 ├── wokwi/
-├── README.md
 ├── requirements.txt
+├── Dockerfile
+└── README.md
 
 ---
 
-## How to run
+## Running Locally
 
-### 1. Setup environment
+### Install dependencies
 
 python -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
 
----
-
-### 2. Run backend
+### Run backend
 
 uvicorn app.main:app --reload
 
-Open in browser:
-http://127.0.0.1:8000/docs
+Open: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 
 ---
 
-## Traffic Module (how to run)
+## Traffic Module
 
-This module simulates traffic and estimates emission levels.
+This module simulates traffic flow and emission estimation.
 
-Steps:
+How to open and run
+Open terminal / command prompt
+Navigate to project folder:
+cd traffic_module
+Run the main script:
+python traffic_integration.py
+Output includes:
+Traffic analysis
+Emission estimation
+Pollution detection
 
-1. Go to the folder:
+### Requirements
 
-   cd traffic_module
+Install:
 
-2. Run the main file:
-
-   python traffic_integration.py
-
-   (If file name is different, run the main script like `ai_model.py` or `aqi_module.py`)
-
-3. Output:
-
-   * Traffic data processed
-   * Emission level calculated
-   * High/normal pollution detected
-
+pip install numpy pandas scikit-learn
+pip install matplotlib
 ---
 
-## Water / Unity Module
+## Unity Simulation
 
-This part shows how water sprinklers can help reduce pollution visually.
+Used for visualizing environmental response (water sprinklers).
 
 Steps:
 
-1. Open Unity Hub
-2. Click **Open Project**
-3. Select the `Unity/` folder
-
-After opening:
-
-* Open the main scene (inside `Scenes/`)
-* Click **Play**
-
-This simulates water spraying or environmental change.
+* Open Unity Hub
+* Open `Unity/` folder
+* Run main scene
+* Click Play
 
 ---
 
 ## IoT Simulation (Wokwi)
 
-This simulates sensor data input.
+Used to simulate sensor input data.
 
 Steps:
 
-1. Open the `wokwi/` folder
-2. Upload/open it on wokwi.com
-3. Run the simulation
-
-This generates environmental/sensor values that can be used by the backend.
-
----
-
-## How everything connects
-
-* Traffic module detects high emission
-* Backend processes the condition
-* System suggests:
-
-  * Traffic control actions
-  * Water spraying (via Unity simulation)
+* Open `wokwi/` folder
+* Import into wokwi.com
+* Run simulation
+* Send data to backend API
 
 ---
 
-## Notes
+## API Endpoints
 
-* This is a student project, so some parts are simplified
-* Focus is on idea + working flow, not perfect accuracy
-* Each module can run independently
+/
+Root status
+
+/docs
+API documentation
+
+/iot
+IoT data input
+
+/decision
+Decision engine
+
+/live_decision
+Real-time processing
+
+/gov_aqi
+Government AQI integration
 
 ---
 
 ## Future Improvements
 
-* Real-time traffic simulation (SUMO integration)
-* Better ML models
-* Real sensor data instead of simulation
-* Automated control between modules
+* Real-time traffic simulation using SUMO
+* Advanced ML-based AQI prediction
+* Live ESP32 hardware integration
+* Automated Unity environment control
+* Dashboard frontend
 
 ---
 
-## Author
+## Project Status
 
-Made as part of a project on AQI reduction using traffic and water-based methods.
+Backend deployed and live
+API endpoints active
+IoT simulation integrated
+Unity visualization ready
+Decision system functional
